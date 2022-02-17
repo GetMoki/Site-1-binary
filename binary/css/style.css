@@ -1,0 +1,573 @@
+@charset "UTF-8";
+/*Обнуляємо параметри замовчуванням у браузерів*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+* {
+  /* зірочка означає, що ми звертаємось до всіх тегів на сторінці*/
+  padding: 0;
+  /*обнуляємо внутрішні відступи*/
+  margin: 0;
+  /*обнуляємо зовнішні відступи*/
+  border: 0;
+  /*обнуляємо межі*/
+}
+
+*, *:before, *:after {
+  /*змінюємо підрахунок ширини блоку для всіх тегів та тегів із псевдоелементами*/
+  -webkit-box-sizing: border-box;
+  /* "-webkit" означає apple*/
+  box-sizing: border-box;
+  /*Розмір боксу включає в себе всі відступи і будь-які межі. Контет буде зжиматись, щоб вмістить в боксі*/
+  -moz-box-sizing: border-box;
+  /* "-moz" означає firefox */
+}
+
+:focus, :active {
+  outline: none;
+}
+
+/*забераємо лінії обводки в деяких браузерах підчас використання предпроцесів*/
+a:focus, a:active {
+  outline: none;
+}
+
+/*забераємо лінії обводки в деяких браузерах підчас використання передпроцесів на посиланнях*/
+nav, footer, header, aside {
+  display: block;
+}
+
+/*одразу надаємо кільком тегам HTML5 властивостей блоку*/
+html, body {
+  height: 100%;
+  /*Вказуємо сайту займати всю висоту материського блоку - монітору*/
+  width: 100%;
+  /*Вказуємо сайту займати всю ширину материського блоку - монітору*/
+  font-size: 100%;
+  /*Розмір за замовчуванням має 100% від вказаного розміру*/
+  line-height: 1;
+  /*Міжрядковий інтервал дорівнює ширині шрифта*/
+  font-size: 14px;
+  /*Розмір шрифта за замовчуванням 14 пікселів. Класіка.*/
+  -ms-text-size-adjust: 100%;
+  /* "-ms" значить microsoft (не даємо браузеру самовільно змінювати розмір шрифта) */
+  -moz-text-size-adjust: 100%;
+  /* "-moz" означає firefox (не даємо браузеру самовільно змінювати розмір шрифта)*/
+  -webkit-text-size-adjust: 100%;
+  /* "-webkit" означає apple (не даємо айфонам самовільно змінювати розмір шрифта)*/
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+/*Звертаємось до тегів форм і просимо їх наслідувати сімейство шрифта*/
+input::-ms-clear {
+  display: none;
+}
+
+/*Заберає заданий автоматично стиль кнопки "очистити текстове поле". Спочатку ця кнопка невидима і 
+з'являється у правій частині поля лише підчас введення тексту. Браузер Internet Explorer& Edge.*/
+button {
+  cursor: pointer;
+}
+
+/*Задаємо стиль курсору підчас наведеня на кнопку*/
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/*Забираємо зайві відступи та пробели навкруги кнопок в браузері Firefox.*/
+a, a:visited {
+  text-decoration: none;
+}
+
+/*Відвідані посилання не змінюються*/
+a:hover {
+  text-decoration: none;
+}
+
+/*Посилання при наведенні не змінюються*/
+ul li {
+  list-style: none;
+}
+
+/*Видаляємо стилі списків*/
+img {
+  vertical-align: top;
+}
+
+/*Встановлюємо за замовчуванням вертикальне позиціонування тегу картинки*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 400;
+}
+
+/*Обнуляємо стилі заголовку та вказуємо наслідувати сімейство шрифта*/
+/*------------------------------------------------------------------------------------------------------------------------------*/
+.content {
+  font-family: Lato;
+}
+.content__top {
+  padding: 140px 0 150px 0;
+  background: url("../img/site/header/HeaderBackground.png") 0 0/cover no-repeat;
+}
+.content__top__title {
+  margin: 160px 0 10px 0;
+  font-size: 34px;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1.176;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 5.43px;
+  position: relative;
+}
+.content__top__title__subtitle {
+  margin: 0 0 0 0;
+  padding: 0 0 60px 0;
+  font-size: 26px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 4.15px;
+  position: relative;
+}
+.content__top__title__subtitle:after {
+  content: "";
+  background-color: #ffffff;
+  height: 2px;
+  width: 105px;
+  position: absolute;
+  left: 50%;
+  margin: 0px 0px 0px -52.5px;
+  bottom: 0;
+}
+.content__logo {
+  display: block;
+  margin: 0 auto;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.container__button {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  line-height: 2.815;
+  width: 200px;
+  height: 47px;
+  text-transform: uppercase;
+  padding: 0 42px;
+  letter-spacing: 0.67px;
+  background-color: transparent;
+}
+.container__button.top {
+  position: relative;
+  margin: 220px auto 0;
+  border: 1px solid #ffffff;
+  color: white;
+}
+.container__button.top.arrowdown {
+  position: relative;
+  display: block;
+  border: none;
+  padding: 0 0 0 0;
+  margin: 80px auto 0px;
+  width: 37px;
+  height: 30px;
+  -webkit-animation: arrow 2s infinite ease;
+          animation: arrow 2s infinite ease;
+}
+.container__button.top.arrowdown:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.container__button.top:hover {
+  -webkit-box-shadow: 0 0 15px white;
+          box-shadow: 0 0 15px white;
+}
+.container__button.portfolio__button {
+  position: relative;
+  margin: 60px auto 0;
+  border: 1px solid #000000;
+  color: #000000;
+}
+.container__button.portfolio__button:hover {
+  -webkit-box-shadow: 0 0 15px #46748c;
+          box-shadow: 0 0 15px #46748c;
+}
+.container__button.form-contact__button {
+  display: block;
+  margin: 35px 0px 0 auto;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #000000;
+  color: #000000;
+  max-width: 115px;
+  padding: 0px;
+}
+.container__button.form-contact__button:hover {
+  -webkit-box-shadow: 0 0 15px #46748c;
+          box-shadow: 0 0 15px #46748c;
+}
+
+@-webkit-keyframes arrow {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 30px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 30px;
+  }
+  100% {
+    top: 0;
+  }
+}
+.menu {
+  position: sticky;
+  top: 0px;
+  background: #fff;
+  padding: 25px;
+  border-bottom: 2px solid #f2f2f2;
+  z-index: 1;
+}
+.menu_mb {
+  margin: 0px 0 130px 0;
+}
+.menu__list li {
+  display: inline;
+  margin: 0 25px 0;
+}
+.menu__link {
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #3c3c3c;
+  font-weight: 700;
+}
+.menu__link:hover {
+  color: #ada074;
+  -webkit-text-decoration: underline 2px;
+          text-decoration: underline 2px;
+}
+.menu__link.act {
+  color: #ada074;
+}
+
+.header-block__name {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 8.95px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0 0 30px 0;
+}
+.header-block__name:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin: 0 0 0 -45.5px;
+  background: #000000;
+  width: 81px;
+  height: 2px;
+}
+.header-block__text {
+  padding: 30px 0 0 0;
+  color: #868585;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 25.89px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 0 60px 0;
+}
+.about__header-block {
+  margin: 0 0 65px 0;
+}
+.about__body {
+  min-width: 900px;
+  margin: 0 auto;
+}
+.about__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.about__column {
+  padding: 0px 15px;
+  display: inline;
+}
+.about__item {
+  width: 260px;
+  margin: 0 0 30px 0;
+}
+.about__icon {
+  margin: 0px auto 40px;
+  border-radius: 50%;
+  width: 92px;
+  height: 92px;
+  border: 2px solid #f1f1f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.about__icon_ml {
+  margin: 0 0 0 10px;
+}
+.about_title {
+  text-align: center;
+  color: #000000;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 3.52px;
+  margin: 0px 0px 35px 0px;
+}
+.about_text {
+  text-align: center;
+  color: #868585;
+  line-height: 26px;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.portfolio {
+  background: #f3f3f3;
+  padding: 105px 0 60px 0;
+}
+.portfolio__header-block {
+  margin: 0 0 50px 0;
+}
+.portfolio__filter {
+  margin: 0 0 136px 0;
+}
+.portfolio__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.portfolio__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  padding: 0 15px;
+  margin: 0 0 30px 0;
+}
+.portfolio__item img {
+  max-width: 100%;
+}
+.filter__list li {
+  display: inline;
+  margin: 0 25px 0;
+}
+.filter__item {
+  color: #3c3c3c;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+}
+.filter__item.active {
+  color: #ada074;
+}
+.filter__item:hover {
+  color: #ada074;
+}
+
+.partners {
+  background: url("../img/site/partners/partnersbackground.png") center/cover no-repeat;
+  padding: 100px 0 100px 0;
+}
+.partners__title {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 300;
+  margin: 0 0 90px 0;
+  line-height: 1.2;
+}
+.partners__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.partners__column {
+  padding: 0 56.5px;
+}
+.contact {
+  padding: 180px 0 60px 0;
+}
+.contact__header-block {
+  margin: 0 0 120px 0;
+}
+.contact__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 15px;
+}
+.contact__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  pading: 0 25px;
+  margin: 0 40px;
+}
+.contact__form {
+  text-align: right;
+}
+.contact__content {
+  text-align: left;
+  max-width: 250px;
+  font-size: 14px;
+}
+.contact__text {
+  font-weight: 300;
+  line-height: 1.857;
+  margin: 0 0 35px 0;
+}
+.contact__name {
+  font-weight: 700;
+  margin: 0 0 30px 0;
+}
+.contact__email a {
+  font-weight: 700;
+  color: #000;
+}
+.contact__email a:hover {
+  text-decoration: underline;
+}
+
+.form-contact__body {
+  display: inline-block;
+  width: 100%;
+  max-width: 385px;
+}
+.form-contact__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -15px 70px -15px;
+}
+.form-contact__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  padding: 0 15px;
+}
+.form-contact .input {
+  border-top: 1px solid #000;
+  height: 50px;
+  border-radius: 0 !important;
+  width: 100%;
+  display: block;
+  padding: 0px 20px;
+  background-color: #ededed;
+  font-size: 15px;
+}
+.form-contact .input:focus {
+  border-top: 3px solid #1E90FF;
+}
+.form-contact textarea.input {
+  resize: none;
+  height: 170px;
+  padding: 10px 20px;
+}
+.form-contact__label {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  -moz-text-align-last: left;
+       text-align-last: left;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+.social {
+  margin: 0 0 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.social__item {
+  margin: 0 15px 0 0;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.social__item.ml {
+  padding: 0 0 1px 2px;
+}
+
+.content__bottom {
+  background: #3c3c3c;
+  padding: 45px 0;
+  position: relative;
+}
+.content__bottom__logo {
+  display: block;
+  margin: 0 0 30px 0;
+}
+.content__bottom__menu {
+  margin: 0 0 40px 0;
+}
+.content__bottom__list li {
+  display: inline;
+  margin: 0 15px;
+}
+.content__bottom__link {
+  font-weight: 400;
+  color: #a4a4a4;
+  line-height: 1.2;
+}
+.content__bottom__text {
+  color: #6c6c6c;
+}

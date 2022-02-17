@@ -1,0 +1,473 @@
+@import 'nullstyle.scss'; // Файл обнуляющого стилю
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+
+.content {//Загальний блок контенту сайту
+	font-family: Lato;
+
+	&__top {//Параметри і стиль верхнього блоку сайту
+		padding: 140px 0 150px 0;
+		background: url('../img/site/header/HeaderBackground.png') 0 0/cover no-repeat;
+		&__title{//загальні налаштування тексту для верху сайту та стиль заголовку
+			margin: 160px 0 10px 0;
+			font-size: 34px;
+  		color: #ffffff;
+  		text-transform: uppercase;
+ 			line-height: 1.176;
+  		text-align: center;
+  		font-weight: 900;
+  		letter-spacing: 5.43px;
+  		position: relative;
+  		&__subtitle{//стиль для другого заголовку
+  			margin: 0 0 0 0;
+  			padding: 0 0 60px 0;
+	  		font-size: 26px;	
+	  		font-weight: 400;
+	  		text-transform: none;
+	  		letter-spacing: 4.15px;
+	  		position: relative;
+	  		&:after{//лінія під текстом
+	  			content: '';
+	  			background-color: #ffffff;
+	  			height: 2px;
+	  			width: 105px;
+	  			position: absolute;
+	  			left: 50%;
+	  			margin: 0px 0px 0px -52.5px;
+	  			bottom: 0;
+	  		}
+	  	}
+  	}	
+	}
+	&__logo {//розмістив лого по центру
+		display: block;
+		margin: 0 auto;
+	}
+	&__middle{
+	}
+}
+
+//=========================================================================================
+//Стиль кнопки
+//=========================================================================================
+.container {//Параметри і стиль всього контейнеру сайту
+	max-width: 1100px;
+	margin: 0 auto;
+	text-align: center;
+
+	&__button {
+		display: block;
+		text-align: center;
+		font-size: 16px;
+		line-height: 2.815;
+		width: 200px;
+	  height: 47px;
+	  text-transform: uppercase;
+	  padding: 0 42px;
+	  letter-spacing: 0.67px;
+	  background-color: transparent;
+	  &.top{
+	  	position: relative;
+	  	margin: 220px auto 0;
+	  	border: 1px solid #ffffff;
+	  	color: white;
+			&.arrowdown {
+				position: relative;
+				display: block;
+				border: none;
+				padding: 0 0 0 0;
+				margin: 80px auto 0px;
+				width: 37px;
+				height: 30px;
+				animation: arrow 2s infinite ease; ////анімація рухустрілки
+			}
+			&.arrowdown:hover {
+				box-shadow: none;
+			}
+	  }
+	  &.top:hover{
+	  	box-shadow: 0 0 15px white;
+	  };
+	  &.portfolio__button{
+	  	position: relative;
+	  	margin: 60px auto 0;
+	  	border: 1px solid #000000;
+	  	color: #000000;
+	  }
+	  &.portfolio__button:hover{
+	  	box-shadow: 0 0 15px #46748c;
+	  }
+	  &.form-contact__button{
+	  	display: block;
+	  	margin: 35px 0px 0 auto;
+	  	position: relative;
+	  	right: 0;
+	  	bottom: 0;
+	  	border: 1px solid #000000;
+	  	color: #000000;
+	  	max-width: 115px;
+	  	padding: 0px;
+	  }
+	  &.form-contact__button:hover{
+	  	box-shadow: 0 0 15px #46748c;
+	  }
+	}
+}
+
+@keyframes arrow{ //анімація рухустрілки
+	0%{top: 0;}
+	50%{top: 30px;}
+	100%{top:0;}
+}
+
+//=========================================================================================
+//Параметри і стиль меню
+//=========================================================================================
+.menu {
+	position: sticky;//закріплюємо меню в момент скролу
+	top: 0px;
+	background: #fff;
+	padding: 25px;
+	border-bottom: 2px solid #f2f2f2;
+	z-index: 1;
+	&_mb{
+		margin: 0px 0 130px 0;
+	}
+	&__items {}
+	&__list {
+		& li{
+			display: inline;
+			margin: 0 25px 0;
+		}
+	}
+
+	&__link {
+		text-transform: uppercase;
+		font-size: 15px;
+		color: #3c3c3c;
+		font-weight: 700;
+		&:hover{
+			color: #ada074;
+			text-decoration: underline 2px;
+		}
+		&.act {
+			color:#ada074;
+		}
+	}
+}
+
+//=========================================================================================
+//Стилі та параметри першого блоку - about
+//=========================================================================================
+.container {
+}
+
+.header-block {//стиль заголовку та тексту
+	&__name {
+		font-size: 34px;
+		font-weight: 700;
+		letter-spacing: 8.95px;
+		text-transform: uppercase;
+		position: relative;
+		padding: 0 0 30px 0;
+		&:after{
+			content: '';
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			margin: 0 0 0 -45.5px;
+			background: #000000;
+			width: 81px;
+			height: 2px;
+		}
+	}
+	&__text {
+		padding: 30px 0 0 0;
+		color: #868585;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 25.89px;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+}
+
+.about {//стиль наповнення
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 0 60px 0;
+	&__header-block {
+		margin: 0 0 65px 0;
+	}
+	&__body {
+		min-width: 900px;
+		margin: 0 auto;
+	}
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+	}
+	&__column {
+		padding: 0px 15px;
+		display: inline;
+	}
+	&__item {
+		width: 260px;
+		margin: 0 0 30px 0;
+	}
+	&__icon {
+		margin: 0px auto 40px;
+		border-radius: 50%;
+		width: 92px;
+		height: 92px;
+		border: 2px solid #f1f1f1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&_ml{
+				margin: 0 0 0 10px;
+		}
+	}
+	&_title {
+		text-align: center;
+		color: #000000;
+		font-size: 22px;
+		text-transform: uppercase;
+		letter-spacing: 3.52px;
+		margin: 0px 0px 35px 0px;
+	}
+	&_text {
+		text-align: center;
+		color: #868585;
+		line-height: 26px;
+		font-weight: 300;
+		font-size: 14px;
+	}
+}
+
+//=========================================================================================
+//Стилі та параметри другого блоку - portfolio
+//=========================================================================================
+
+.portfolio {
+	background: #f3f3f3;
+	padding: 105px 0 60px 0;
+	&__header-block {
+		margin: 0 0 50px 0;
+	}
+	&__filter {
+		margin: 0 0 136px 0;
+	}
+	&__items {
+		display: flex;
+		margin: 0 -15px;
+		flex-wrap:wrap;
+	}
+	&__column {
+		flex: 0 1 50%;
+		padding: 0 15px;
+		margin: 0 0 30px 0;
+	}
+	&__item {
+		img{
+			max-width: 100%;
+		}
+	}
+	&__footer {}
+	&__button {}
+}
+.filter {
+	&__list {
+		& li{
+			display: inline;
+			margin: 0 25px 0;
+		}
+	}
+	&__item {
+		color: #3c3c3c;
+		font-size: 15px;
+		text-transform: uppercase;
+		font-weight: 700;
+		cursor: pointer;
+		&.active{
+			color: #ada074;
+		}
+	}
+	&__item:hover{
+		color: #ada074;
+	}
+}
+
+//=========================================================================================
+//Код фільтру картинок JS підключено в index.html
+//=========================================================================================
+
+//=========================================================================================
+//Параметри і стиль блоку партнери
+//=========================================================================================
+.partners {
+	background: url('../img/site/partners/partnersbackground.png') center / cover no-repeat;
+	padding: 100px 0 100px 0;
+	&__title {
+		font-size: 30px;
+		color: #fff;
+		font-weight: 300;
+		margin: 0 0 90px 0;
+		line-height: 1.2;
+	}
+	&__items {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__column {
+		padding: 0 56.5px;
+		
+	}
+	&__item {}
+}
+
+//=========================================================================================
+//Параметри і стиль блоку контакти
+//=========================================================================================
+.contact {
+	padding: 180px 0 60px 0;
+	&__header-block {
+		margin: 0 0 120px 0;
+	}
+	&__body {
+		display: flex;
+		margin: 0 15px;
+	}
+	&__column {
+		flex: 0 1 50%;
+		pading: 0 25px;
+		margin: 0 40px;
+	}
+	&__form {
+		text-align: right;
+	}
+	&__content {
+		text-align: left;
+		max-width: 250px;
+		font-size: 14px;
+	}
+	&__text {
+		font-weight: 300;
+		line-height: 1.857;
+		margin: 0 0 35px 0;
+	}
+	&__name {
+		font-weight: 700;
+		margin: 0 0 30px 0;
+	}
+	&__social {}
+	&__email {
+		a{
+			font-weight: 700;
+			color: #000;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.form-contact {
+	&__body{
+		display: inline-block;
+		width: 100%;
+		max-width: 385px;
+	}	
+	&__row {
+		display: flex;
+		margin: 0 -15px 70px -15px;
+	}
+	&__column {
+		flex: 0 1 50%;
+		padding: 0 15px;
+	}
+	.input{
+		border-top: 1px solid #000;
+		height: 50px;
+		border-radius: 0 !important;
+		width: 100%;
+		display: block;
+		padding: 0px 20px;
+		background-color: #ededed;
+		font-size: 15px;
+		&:focus{
+			border-top: 3px solid #1E90FF;
+		}
+		//треба додати перевірку правельності вводу імені та мейла
+	}
+	textarea.input{
+		resize:none;
+		height: 170px;
+		padding: 10px 20px;
+	}
+	&__input {}
+	&__label {
+		font-size: 14px;
+		font-weight: 700;
+		margin: 0 0 10px 0;
+		text-transform: uppercase;
+		text-align-last: left;
+		line-height: 1.2;
+		letter-spacing: 1px;
+	}
+}
+.social {
+	margin: 0 0 15px 0;
+	display: flex;
+	&__item {
+		margin: 0 15px 0 0;
+		border-radius: 50%;
+		width: 30px;
+		height: 30px;
+		border: 2px solid #000;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&.ml{
+			padding: 0 0 1px 2px;
+		}
+	}
+}
+//=========================================================================================
+//Параметри і стиль блоку футтер
+//=========================================================================================
+.content {
+	&__bottom {
+		background: #3c3c3c;
+		padding: 45px 0;
+		position: relative;
+		&__body {}
+		&__logo {
+			display: block;
+			margin: 0 0 30px 0;
+		}
+		&__menu {
+				margin: 0 0 40px 0;
+		}
+		&__list {
+			& li{
+			display: inline;
+			margin: 0 15px;
+			}
+		}
+		&__link{
+			font-weight: 400;
+			color: #a4a4a4;
+			line-height: 1.2;
+		}
+		&__text {
+			color: #6c6c6c;
+		}
+	}
+}
+//=========================================================================================
+//Hаppy end first site was created
+//=========================================================================================
+

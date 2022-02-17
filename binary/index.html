@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Binary Спроба першого макету 16.01.2022</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+	<!--Вміст сайту-->
+	<div class="content">
+		<!--Верх сайту (посадкова частина)--> 
+		<div class="content__top">
+			<!--Контейнер ширини контенту сайту-->
+			<div class="container">
+				<a href="#mainsite" class="content__top__logo">
+						<!--Логотип-->
+						<img src="img/site/header/logosite.png" alt="" class="content__logo">
+				</a>
+				<h1 class="content__top__title">
+					Clear, smart, attractive design
+				</h1>
+				<p class="content__top__title content__top__title__subtitle">
+					for your app, logo, website
+				</p>
+				<!--Кнопка Read more верхня частина сайту-->
+				<a href="#mainsite" class="container__button top">
+				 Read more
+				</a>
+				<!--Стрілка в низ від кгопки read more-->
+				<a href="#mainsite" class="container__button top arrowdown">
+					<img src="img/site/header/arrowdown.png" alt="">
+				</a>
+			</div>
+		</div>
+		<!--середина сайту-->
+		<a name="mainsite"></a>
+		<div class="content__middle"> 
+			<!--Навігація по сайту-->
+			<div class="menu menu_mb"> 
+				<div class="container">
+					<nav class="menu__items">
+						<ul class="menu__list">
+							<li>
+								<a data-menu="1" href="#" class="menu__link act">home</a>
+							</li>
+							<li>
+								<a data-menu="2" href="#mainsite" class="menu__link">about us</a>
+							</li>
+							<li>
+								<a data-menu="3" href="#portfolio" class="menu__link">portfolio</a>
+							</li>
+							<li>
+								<a data-menu="4" href="#contact" class="menu__link">contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!--Перший блок - about-->			
+			<div class="about">
+				<div class="container">
+					<div class="about__header-block header-block">
+						<div class="header-block__name">
+							about
+						</div>
+						<div class="header-block__text">
+							We specialize in contemporary, functional, and stunning websites with design that really brings that "WOW" factor. In our design process, we make sure to stay one step ahead of the latest trends, never forgetting to abide by key web standards.
+						</div>
+					</div>
+					<div class="about__body">
+						<div class="about__row">
+							<div class="about__column">
+								<div class="about__item">
+									<div class="about__icon">
+										<img src="img/site/about/web.png" alt="">
+									</div>
+									<div class="about_title">
+										Web
+									</div>
+									<div class="about_text">
+										We tend to deliver unique and functional design, through innovation and creativity.
+									</div>
+								</div>
+							</div>
+							<div class="about__column">
+								<div class="about__item">
+									<div class="about__icon">
+										<img src="img/site/about/iosandandroid.png" alt="">
+									</div>
+									<div class="about_title">
+										iOS AND ANDROID
+									</div>
+									<div class="about_text">
+										We seek to bring new businesses and customers closer together through valuable insights and proper targeting.
+									</div>
+								</div>
+							</div>
+							<div class="about__column">
+								<div class="about__item">
+									<div class="about__icon">
+										<img src="img/site/about/marketing.png" class="about__icon_ml" alt="">
+									</div>
+									<div class="about_title">
+										MARKETING
+									</div>
+									<div class="about_text">
+										We’ll help you establish the right goals and build the right paths. Success depends on setting the right intention.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Другий блок - portfolio-->
+			<a name="portfolio"></a>				
+			<div class="portfolio">
+				<div class="container">
+					<div class="portfolio__header-block header-block">
+						<div class="header-block__name">
+							portfolio
+						</div>
+					</div>	
+						<!--фільтр для відображення картинок-->
+						<nav class="portfolio__filter filter">
+							<ul class="filter__list">
+								<li data-filter="1" class="filter__item active">
+									all
+								</li>
+								<li data-filter="2" class="filter__item">
+									web
+								</li>
+								<li data-filter="3" class="filter__item">
+									apps
+								</li>
+								<li data-filter="4" class="filter__item">
+									other
+								</li>
+							</ul>
+						</nav>
+						<!--блок з картинками-->
+						<div class="portfolio__items gallery">
+							<div class="portfolio__column f_2">
+								<a href="#" class="portfolio__item">
+								 <img src="img/site/portfolio/01.jpg" alt="">
+								</a>
+							</div>
+							<div class="portfolio__column f_4">
+								<a href="#" class="portfolio__item">
+								 <img src="img/site/portfolio/02.jpg" alt="">
+								</a>
+							</div>
+							<div class="portfolio__column f_3">
+								<a href="#" class="portfolio__item">
+								 <img src="img/site/portfolio/03.jpg" alt="">
+								</a>
+							</div>
+							<div class="portfolio__column f_2">
+								<a href="#" class="portfolio__item">
+								 <img src="img/site/portfolio/04.jpg" alt="">
+								</a>
+							</div>	
+							<div class="portfolio__column f_2">
+								<a href="#" class="portfolio__item">
+								 <img src="img/site/portfolio/05.jpg" alt="">
+								</a>
+							</div>
+							<div class="portfolio__column f_3">
+								<a href="#" class="portfolio__item">
+								 <img src="img/site/portfolio/06.jpg" alt="">
+								</a>
+							</div>	
+						</div>
+					<div class="portfolio__footer">
+						<a href="#mainsite" class="container__button portfolio__button">
+							Read more
+						</a>
+					</div>	
+				</div>
+			</div>
+			<!--Третій блок партнери-->
+			<div class="partners">
+				<div class="container">
+					<div class="partners__title">
+						Our partners
+					</div>
+					<div class="partners__items">
+						<div class="partners__column">
+							<div class="partners__item">
+								<img src="img/site/partners/other.png" alt="">
+							</div>
+						</div>
+						<div class="partners__column">
+							<div class="partners__item">
+								<img src="img/site/partners/Archiq.png" alt="">
+							</div>
+						</div>
+						<div class="partners__column">
+							<div class="partners__item">
+							<img src="img/site/partners/Thomsoon.png" alt="">
+							</div>
+						</div>
+						<div class="partners__column">
+							<div class="partners__item">
+								<img src="img/site/partners/alex.png" alt="">
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+			<!--Четвертий блок контакти-->
+			<a name="contact"></a>
+			<div class="contact">
+				<div class="container">
+					<div class="contact__header-block  header-block">
+						<div class="header-block__name">contact</div>
+					</div>
+					<div class="contact__body">
+						<div class="contact__column">
+							<form action="" class="contact__form form-contact">
+								<div class="form-contact__body">
+									<div class="form-contact__row">
+										<div class="form-contact__column">
+											<div class="form-contact__input">
+												<div class="form-contact__label">Your name</div>										
+												<input autocomplete="off" type="text" name="form[]" data-value="" class="input"/>
+											</div>
+										</div>
+										<div class="form-contact__column">
+											<div class="form-contact__input">
+												<div class="form-contact__label">Your e-mail</div>										
+												<input autocomplete="off" type="text" name="form[]" data-value="" class="input"/>
+											</div>
+										</div>
+									</div>
+										<div class="form-contact__input">
+											<div class="form-contact__label">Message</div>
+											<textarea autocomplete="off" name="form[]" data-value="" class="input"></textarea>
+										</div>
+									<button type="submit" class="container__button form-contact__button">send</button>
+								</div>
+							</form>
+						</div>
+						<div class="contact__column">
+							<div class="contact__content">
+								<div class="contact__text">Have an idea for a project? Just looking to explore and see the possibilities?I'm here to help.</div>
+								<div class="contact__name">Postma Elena</div>
+								<div class="contact__social social">
+									<a target="_blank" href="https://www.facebook.com/" class="social__item"> <img src="img/site/contact/facebook.png" alt=""></a>
+									<a target="_blank" href="https://www.linkedin.com/" class="social__item ml"> <img src="img/site/contact/linkedin.png" alt=""></a>
+								</div>
+								<div class="contact__email">
+									e-mail: <a href="mailto:postma.elena@gmail.com">postma.elena@gmail.com</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div> <!--content__middle-->
+		<!--Зервешено основну частину сайту-->
+		<!--Фінальний блок footer-->
+		<div class="content__bottom">
+			<div class="container">
+				<div class="content__bottom__body">
+					<!--Логотип-->
+					<a href="#" class="content__bottom__logo">
+						<img src="img/site/footer/footerlogo.png" alt="" class="content__logo">
+					</a>
+					<!--Меню-->
+					<nav class="content__bottom__menu">
+						<ul class="content__bottom__list">
+							<li>
+								<a href="#mainsite" class="content__bottom__link">Home</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://www.facebook.com/" class="content__bottom__link">Facebook</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://www.linkedin.com/" class="content__bottom__link">Linkedin</a>
+							</li>
+							<li>
+								<a href="#contact" class="content__bottom__link">Contact</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="content__bottom__text">
+						© 2015. All Rights Reserved 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!--content-->
+	<!--Підключаємо бібліотеку jquery-->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<!--Підключив Javascript-->
+	<script src="js/script.js"></script>
+</body>
+</html>
